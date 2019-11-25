@@ -2,7 +2,7 @@ interface Person {
     getName(): string
 }
 
-enum PersonType {
+export enum PersonType {
     Rural,
     Urban
 }
@@ -19,8 +19,7 @@ class CityPerson implements Person {
     }
 }
 
-
-class Factory {
+export class Factory {
     public getPerson(type: PersonType): Person {
         switch (type) {
             case PersonType.Rural:
