@@ -2,7 +2,7 @@ interface Button {
     Paint();
 }
 
-interface GUIFactory {
+export interface GUIFactory {
     CreateButton(): Button;
 }
 
@@ -19,13 +19,13 @@ class OSXButton implements Button {
 }
 
 
-class WinFactory implements GUIFactory {
+export class WinFactory implements GUIFactory {
     CreateButton(): Button {
         return new WinButton();
     }
 }
 
-class OSXFactory implements GUIFactory {
+export class OSXFactory implements GUIFactory {
     public CreateButton(): Button {
         return new OSXButton();
     }

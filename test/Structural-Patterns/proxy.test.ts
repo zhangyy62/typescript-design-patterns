@@ -1,7 +1,7 @@
 import { ProxyCar, Driver } from '../../src/patterns/Structural-Patterns/proxy';
 import * as assert from 'assert';
 
-describe('#proxy test', function () {
+describe.skip('#proxy test', function () {
     it('proxy succeed', () => {
         let car = new ProxyCar(new Driver(17));
         car.driveCar();
