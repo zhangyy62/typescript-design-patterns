@@ -18,7 +18,7 @@ class Car {
     }
 }
 
-class FerrariBuilder implements ICarBuilder {
+export class FerrariBuilder implements ICarBuilder {
     colour: string;
     numDoors: number;
     GetResult(): Car {
@@ -26,9 +26,9 @@ class FerrariBuilder implements ICarBuilder {
     }
 }
 
-class SportsCarBuildDirector {
+export class SportsCarBuildDirector {
     private _builder: ICarBuilder;
-    public SportsCarBuildDirector(builder: ICarBuilder) {
+    public constructor(builder: ICarBuilder) {
         this._builder = builder;
     }
 
